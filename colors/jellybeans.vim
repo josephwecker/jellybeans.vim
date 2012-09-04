@@ -298,10 +298,10 @@ endfun
 " }}}
 
 if !exists("g:jellybeans_background_color")
-  let g:jellybeans_background_color = "151515"
+  let g:jellybeans_background_color = "191919"
 end
 
-call s:X("Normal","e8e8d3",g:jellybeans_background_color,"","White","")
+call s:X("Normal","d4d4c0",g:jellybeans_background_color,"","White","")
 set background=dark
 
 if !exists("g:jellybeans_use_lowcolor_black") || g:jellybeans_use_lowcolor_black
@@ -329,6 +329,7 @@ call s:X("Cursor","","b0d0f0","","","")
 
 call s:X("LineNr","605958",g:jellybeans_background_color,"none",s:termBlack,"")
 call s:X("Comment","888888","","italic","Grey","")
+call s:X("SpecialComment","988888","","italic","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
 
 call s:X("StatusLine","000000","dddddd","italic","","White")
@@ -344,19 +345,36 @@ call s:X("ColorColumn","","000000","","",s:termBlack)
 call s:X("Title","70b950","","bold","Green","")
 
 call s:X("Constant","cf6a4c","","","Red","")
+call s:X("Number","ef5a4c","","","Red","")
+call s:X("Float","ef7a5c","","","Red","")
+call s:X("Boolean","cf6a2c","","","Red","")
 call s:X("Special","799d6a","","","Green","")
+call s:X("Debug","694d3a","","","Green","")
+call s:X("SpecialChar","89dd7a","","","Green","")
 call s:X("Delimiter","668799","","","Grey","")
+call s:X("Tag","7697a9","","underline","Grey","")
 
 call s:X("String","99ad6a","","","Green","")
+call s:X("Character","adc18e","","bold","Green","")
 call s:X("StringDelimiter","556633","","","DarkGreen","")
 
 call s:X("Identifier","c6b6ee","","","LightCyan","")
-call s:X("Structure","8fbfdc","","","LightCyan","")
+call s:X("Structure","8fdfdc","","","LightCyan","")
 call s:X("Function","fad07a","","","Yellow","")
 call s:X("Statement","8197bf","","","DarkBlue","")
-call s:X("PreProc","8fbfdc","","","LightBlue","")
+call s:X("Conditional","9197bf","","","DarkBlue","")
+call s:X("Repeat","81a7bf","","","DarkBlue","")
+call s:X("Label","8197cf","","","DarkBlue","")
+call s:X("Keyword","7177bf","","","DarkBlue","")
+call s:X("Exception","bf2a24","","","Red","")
+call s:X("PreProc","bfbfdc","","","LightBlue","")
+call s:X("Include","dfbfdc","","","LightBlue","")
+call s:X("Define","bfdffc","","","LightBlue","")
+call s:X("Macro","afdfdc","","","LightBlue","")
+call s:X("PreCondit","9fdffc","","","LightBlue","")
+call s:X("Operator","748470","","","LightGreen","")
 
-hi! link Operator Normal
+"hi! link Operator Normal
 
 call s:X("Type","ffb964","","","Yellow","")
 call s:X("NonText","606060",g:jellybeans_background_color,"",s:termBlack,"")
@@ -445,8 +463,8 @@ hi! link luaOperator Conditional
 
 " C
 
-hi! link cFormat Identifier
-hi! link cOperator Constant
+" hi! link cFormat Identifier
+" hi! link cOperator Constant
 
 " Objective-C/Cocoa
 
